@@ -1,0 +1,140 @@
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Light-Cyan: hsl(179, 62%, 43%, 0.7);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Light-Gray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
+  position: relative; /* to place the footer at the bottom of the page */
+}
+
+.grid-container {
+  border-radius: 10px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 350px);
+  grid-template-rows: 250px 270px;
+  overflow: hidden;
+}
+
+.grid-container .header {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 40px;
+  grid-column: span 2;
+}
+
+.grid-container .header h1 {
+  color: var(--Cyan);
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.grid-container .header h3 {
+  color: var(--Bright-Yellow);
+  margin-bottom: 20px;
+}
+
+.grid-container .header p {
+  color: var(--Grayish-Blue);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.grid-container .subscription {
+  padding: 40px;
+  background-color: var(--Cyan);
+}
+
+.grid-container .subscription h2,
+.grid-container .why-us h2 {
+  color: var(--Light-Gray);
+  margin-bottom: 20px;
+}
+
+.grid-container .subscription .price-container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+
+.grid-container .subscription .price-container .price {
+  color: var(--Light-Gray);
+  font-size: 30px;
+}
+
+.grid-container .subscription .price-container .per-month {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.grid-container .subscription p {
+  color: var(--Light-Gray);
+}
+
+.grid-container .subscription .btn {
+  margin-top: 30px;
+  padding: 15px 100px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  color: var(--Light-Gray);
+  background-color: var(--Bright-Yellow);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: scale 100ms ease;
+}
+
+.grid-container .subscription .btn:hover{
+    scale: 1.1;
+}
+
+.grid-container .why-us {
+  padding: 40px;
+  background-color: var(--Light-Cyan);
+}
+
+.grid-container .why-us p{
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+footer {
+  min-height: 1.5rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px){
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
